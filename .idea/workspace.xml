@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b7840f90-d76d-4c44-8714-3933ef6574c2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Yaroslav Ilin &lt;neznayu.ucoz.org@gmail.com&gt;" />
+        <option value="@y_b" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1UX0oOHEXdkW350Iob9z5UkizSR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="expression" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\work IntelJ IDEA\Expresion\src" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="git" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="expression.Main" />
+      <module name="Expresion" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParserAbsSquareTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="expression.parser.ParserAbsSquareTest" />
+      <module name="Expresion" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="expression.parser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParserShiftsTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="expression.parser.ParserShiftsTest" />
+      <module name="Expresion" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="expression.parser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParserTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="expression.parser.ParserTest" />
+      <module name="Expresion" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="expression.parser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TripleExpressionTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TripleExpressionTest" />
+      <module name="Expresion" />
+      <option name="PROGRAM_PARAMETERS" value="hard" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.TripleExpressionTest" />
+      <item itemvalue="Application.ParserTest" />
+      <item itemvalue="Application.ParserShiftsTest" />
+      <item itemvalue="Application.ParserAbsSquareTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ParserAbsSquareTest" />
+        <item itemvalue="Application.ParserShiftsTest" />
+        <item itemvalue="Application.ParserTest" />
+        <item itemvalue="Application.TripleExpressionTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\nezna_z2q2mx9\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b7840f90-d76d-4c44-8714-3933ef6574c2" name="Default Changelist" comment="" />
+      <created>1575487806376</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575487806376</updated>
+      <workItem from="1575487812413" duration="5244000" />
+      <workItem from="1575561746335" duration="18728000" />
+      <workItem from="1576098418868" duration="16000" />
+      <workItem from="1576098479301" duration="630000" />
+      <workItem from="1576176265542" duration="24921000" />
+      <workItem from="1576260450959" duration="380000" />
+      <workItem from="1576261047050" duration="535000" />
+      <workItem from="1576584422642" duration="887000" />
+      <workItem from="1576775093244" duration="7283000" />
+      <workItem from="1580371191546" duration="2290000" />
+      <workItem from="1580912466238" duration="4270000" />
+    </task>
+    <task id="LOCAL-00001" summary="Arithmetical Java parser">
+      <created>1580371965556</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1580371965556</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Arithmetical Java parser">
+      <created>1580372436044</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1580372436044</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Arithmetical Java parser">
+      <created>1580913067782</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1580913067782</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+    <MESSAGE value="Arithmetical Java parser" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arithmetical Java parser" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576229226955">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1576229226955" />
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1580914888469">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1580914888469" />
+    <state x="393" y="6" key="CommitChangelistDialog2" timestamp="1580913065771">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="393" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1580913065771" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1580914434629">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1580914434629" />
+    <state x="588" y="167" key="FileChooserDialogImpl" timestamp="1576584684314">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="588" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1576584684314" />
+    <state x="603" y="328" width="354" height="168" key="Github.CreateGistDialog" timestamp="1576787627934">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="603" y="328" width="354" height="168" key="Github.CreateGistDialog/0.0.1536.824@0.0.1536.824" timestamp="1576787627934" />
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1580923741112">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1580923741112" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1580923741112">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1580923741112" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1580923741112">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1580923741112" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1580923741112">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1580923741112" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1580923741113">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1580923741113" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1580923741113">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1580923741113" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1580923741113">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1580923741113" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1580923741113">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1580923741113" />
+    <state x="277" y="0" key="SettingsEditor" timestamp="1580914481091">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1580914481091" />
+    <state x="527" y="116" key="VCS.ChangeListViewerDialog" timestamp="1580914304094">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="527" y="116" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1580914304094" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1580912469697">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1580912469697" />
+    <state x="498" y="305" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1576178530052">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="305" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1576178530052" />
+    <state x="574" y="276" key="git4idea.rebase.GitRebaseDialog" timestamp="1580914307790">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="276" key="git4idea.rebase.GitRebaseDialog/0.0.1536.824@0.0.1536.824" timestamp="1580914307790" />
+    <state x="455" y="258" width="705" height="307" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1576584685962">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="455" y="258" width="705" height="307" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1536.824@0.0.1536.824" timestamp="1576584685962" />
+    <state x="475" y="40" key="refactoring.ChangeSignatureDialog" timestamp="1576231036873">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="475" y="40" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1576231036873" />
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1580916210292">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1580916210292" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/expression/AbstractExpression.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/expression/Variable.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/expression/parser/ExpressionParser.java</url>
+          <line>203</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/expression/parser/ExpressionParser.java</url>
+          <line>193</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/expression/Main.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="position" language="JAVA" />
+        <watch expression="s" language="JAVA" />
+        <watch expression="s.charAt(position)" language="JAVA" />
+        <watch expression="firstArgument.evaluate(x, y, z)" language="JAVA" />
+        <watch expression="secondArgument.evaluate(x, y, z)" language="JAVA" />
+        <watch expression="operatorLong.apply(firstArgument.evaluate(x, y, z), secondArgument.evaluate(x, y, z))" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
