@@ -17,7 +17,7 @@ public class CheckedAdd implements TripleExpression {
     @Override
     public int evaluate(int x, int y, int z) throws OverflowEEException {
         if (Integer.MAX_VALUE - x < y) {
-            throw new OverflowEEException(new Add(this.x, this.y), x, y, z);
+            throw new OverflowEEException("hui");
         }
         return x + y;
     }

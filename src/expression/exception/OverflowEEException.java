@@ -7,7 +7,7 @@ import expression.Expression;
  */
 public class OverflowEEException extends EEException {
 
-    public OverflowEEException(Expression e, int x, int y, int z) {
-        super("Overflow " + e.toString() + " with x = " + x + ", y = " + y + ", z = " + z);
+    public OverflowEEException(String message) {
+        super("overflow on" + message);
     }
 }

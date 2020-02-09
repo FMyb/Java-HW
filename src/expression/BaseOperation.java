@@ -1,6 +1,7 @@
 package expression;
 
 
+import expression.exception.DBZEEException;
 import expression.exception.OverflowEEException;
 
 import java.util.function.BinaryOperator;
@@ -85,8 +86,38 @@ public abstract class BaseOperation extends AbstractExpression implements Operat
         return operatorDouble.apply(firstArgument.evaluate(x), secondArgument.evaluate(x));
     }
 
+    private void checkcorrect(int x, int y) throws OverflowEEException, DBZEEException {
+        if (operation.equals("+")) {
+            if (x > 0 && Integer.MAX_VALUE - x < y || y > 0 && Integer.MAX_VALUE - y > x) {
+                throw new OverflowEEException(toString());
+            }
+            if (x < 0 && Integer.MIN_VALUE - x > y || y < 0 && Integer.MIN_VALUE - y > x) {
+                throw new OverflowEEException(toString());
+            }
+        }
+        if (operation.equals("-")) {
+            if (x < 0 && Integer.MAX_VALUE + x < y || y < 0 && Integer.MAX_VALUE + y < x) {
+                throw new OverflowEEException(toString());
+            }
+            if (x > 0 && Integer.MIN_VALUE + x < y || y > 0 && Integer.MIN_VALUE + y < x) {
+                throw new OverflowEEException(toString());
+            }
+        }
+        if (operation.equals("*")) {
+            //TODO
+        }
+        if (operation.equals("/")) {
+            if (y == 0) {
+                throw new DBZEEException(toString());
+            }
+        }
+    }
+
     @Override
-    public int evaluate(int x, int y, int z) throws OverflowEEException {
-        return operatorLong.apply(firstArgument.evaluate(x, y, z), secondArgument.evaluate(x, y, z));
+    public int evaluate(int x, int y, int z) throws OverflowEEException, DBZEEException {
+        int calcFirst = firstArgument.evaluate(x, y, z);
+        int calcSecond = secondArgument.evaluate(x, y, z);
+        checkcorrect(calcFirst, calcSecond);
+        return operatorLong.apply(calcFirst, calcSecond);
     }
 }

@@ -1,5 +1,6 @@
 package expression;
 
+import expression.exception.DBZEEException;
 import expression.exception.OverflowEEException;
 
 import java.util.Objects;
@@ -61,7 +62,7 @@ public class Abs implements MyExpression {
     }
 
     @Override
-    public int evaluate(int x, int y, int z) throws OverflowEEException {
+    public int evaluate(int x, int y, int z) throws OverflowEEException, DBZEEException {
         return Math.abs(value.evaluate(x, y, z));
     }
 }
