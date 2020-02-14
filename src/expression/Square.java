@@ -1,7 +1,7 @@
 package expression;
 
-import expression.exception.DBZEEException;
-import expression.exception.OverflowEEException;
+import expression.exceptions.DBZEEException;
+import expression.exceptions.OverflowEEException;
 
 import java.util.Objects;
 

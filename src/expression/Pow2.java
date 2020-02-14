@@ -5,17 +5,17 @@ import expression.exceptions.OverflowEEException;
 
 import java.util.Objects;
 
-public class Abs implements MyExpression {
+public class Pow2 implements MyExpression {
     private final MyExpression value;
-    private boolean f;
+    boolean f;
 
-    public Abs(MyExpression value) {
+    public Pow2(MyExpression value) {
         this.value = value;
     }
 
     @Override
     public int evaluate(int x) {
-        return Math.abs(value.evaluate(x));
+        return 1 << value.evaluate(x);
     }
 
     //    @Override
@@ -45,9 +45,9 @@ public class Abs implements MyExpression {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append('|');
+        sb.append("2**(");
         sb.append(value.toString());
-        sb.append('|');
+        sb.append(')');
         return sb.toString();
     }
 
@@ -63,6 +63,11 @@ public class Abs implements MyExpression {
 
     @Override
     public int evaluate(int x, int y, int z) throws OverflowEEException, DBZEEException {
-        return Math.abs(value.evaluate(x, y, z));
+        int k = value.evaluate(x, y, z);
+        if (k >= 32) {
+            throw new IllegalArgumentException();
+        }
+        if (k < 0) throw new IllegalArgumentException();
+        return 1 << k;
     }
 }

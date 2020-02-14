@@ -1,8 +1,8 @@
 package expression;
 
 
-import expression.exception.DBZEEException;
-import expression.exception.OverflowEEException;
+import expression.exceptions.DBZEEException;
+import expression.exceptions.OverflowEEException;
 
 import java.util.function.BinaryOperator;
 
@@ -86,38 +86,41 @@ public abstract class BaseOperation extends AbstractExpression implements Operat
         return operatorDouble.apply(firstArgument.evaluate(x), secondArgument.evaluate(x));
     }
 
-    private void checkcorrect(int x, int y) throws OverflowEEException, DBZEEException {
+    public int calcwithcheckcorrect(int x, int y) throws OverflowEEException, DBZEEException {
         if (operation.equals("+")) {
-            if (x > 0 && Integer.MAX_VALUE - x < y || y > 0 && Integer.MAX_VALUE - y > x) {
-                throw new OverflowEEException(toString());
+            if (x > 0 && Integer.MAX_VALUE - x < y || y > 0 && Integer.MAX_VALUE - y < x) {
+                throw new OverflowEEException("overflow");
             }
             if (x < 0 && Integer.MIN_VALUE - x > y || y < 0 && Integer.MIN_VALUE - y > x) {
-                throw new OverflowEEException(toString());
+                throw new OverflowEEException("overflow");
             }
+            return x + y;
         }
         if (operation.equals("-")) {
-            if (x < 0 && Integer.MAX_VALUE + x < y || y < 0 && Integer.MAX_VALUE + y < x) {
-                throw new OverflowEEException(toString());
+            if (y < 0 && Integer.MAX_VALUE + y < x || y > 0 && Integer.MIN_VALUE + y > x) {
+                throw new OverflowEEException("overflow");
             }
-            if (x > 0 && Integer.MIN_VALUE + x < y || y > 0 && Integer.MIN_VALUE + y < x) {
-                throw new OverflowEEException(toString());
-            }
+            return x - y;
         }
         if (operation.equals("*")) {
-            //TODO
+            if (1L * x * y > 1L* Integer.MAX_VALUE || 1L * x * y < 1L * Integer.MIN_VALUE) {
+                throw new OverflowEEException("overflow");
+            }
+            return x * y;
         }
         if (operation.equals("/")) {
-            if (y == 0) {
-                throw new DBZEEException(toString());
+            if (x == Integer.MIN_VALUE && y == -1 || y == 0) {
+                throw new OverflowEEException("overflow");
             }
+            return x / y;
         }
+        throw new IllegalArgumentException();
     }
 
     @Override
     public int evaluate(int x, int y, int z) throws OverflowEEException, DBZEEException {
         int calcFirst = firstArgument.evaluate(x, y, z);
         int calcSecond = secondArgument.evaluate(x, y, z);
-        checkcorrect(calcFirst, calcSecond);
-        return operatorLong.apply(calcFirst, calcSecond);
+        return calcwithcheckcorrect(calcFirst, calcSecond);
     }
 }

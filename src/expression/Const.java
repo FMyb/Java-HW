@@ -1,7 +1,5 @@
 package expression;
 
-import expression.exception.EEException;
-
 import java.util.Objects;
 
 public class Const implements MyExpression {
