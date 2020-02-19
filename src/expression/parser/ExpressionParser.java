@@ -1,6 +1,9 @@
 package expression.parser;
 
 import expression.*;
+import expression.exceptions.IllegalArgumentException;
+import expression.exceptions.IllegalNumberException;
+import expression.exceptions.IllegalOperationException;
 import expression.exceptions.IllegalSymbolException;
 
 import java.util.Map;
@@ -22,7 +25,7 @@ public class ExpressionParser implements Parser {
             '(', OperationType.OPEN_BRACKET,
             ')', OperationType.CLOSE_BRACKET);
 
-    private String nextLexem() throws IllegalSymbolException {
+    private String nextLexem() throws IllegalSymbolException, IllegalArgumentException, IllegalOperationException {
         StringBuilder sb = new StringBuilder();
         while (notEnd() && s.charAt(position) == '-') {
             sb.append(s.charAt(position));
@@ -35,7 +38,7 @@ public class ExpressionParser implements Parser {
             f = true;
         }
         if (f && notEnd() && s.charAt(position) == '(') {
-            throw new IllegalSymbolException("find " + nextOperation());
+            throw new IllegalOperationException("find " + nextOperation());
         }
         return sb.toString();
     }
@@ -50,7 +53,7 @@ public class ExpressionParser implements Parser {
         }
     }
 
-    private boolean nextString(String correct) {
+    private boolean nextString(String correct) throws IllegalOperationException {
         int i = 0;
         if (!notEnd()) {
             return false;
@@ -63,12 +66,12 @@ public class ExpressionParser implements Parser {
             position++;
         }
         if (i != correct.length()) {
-            throw new IllegalArgumentException();
+            throw new IllegalOperationException("found illegal operation");
         }
         return true;
     }
 
-    private OperationType nextOperation() throws IllegalSymbolException {
+    private OperationType nextOperation() throws IllegalSymbolException, IllegalArgumentException, IllegalOperationException {
         skipSpace();
         if (correctOperation != OperationType.NOTHING) {
             return correctOperation;
@@ -80,7 +83,7 @@ public class ExpressionParser implements Parser {
                 correctOperation = OperationType.POW;
             } else {
                 if (!notEnd()) {
-                    throw new IllegalSymbolException("No argument");
+                    throw new IllegalArgumentException("No argument");
                 }
                 correctOperation = OperationType.MUL;
             }
@@ -93,7 +96,7 @@ public class ExpressionParser implements Parser {
                 correctOperation = OperationType.LOG;
             } else {
                 if (!notEnd()) {
-                    throw new IllegalSymbolException("No argument");
+                    throw new IllegalArgumentException("No argument");
                 }
                 correctOperation = OperationType.DIV;
             }
@@ -109,7 +112,7 @@ public class ExpressionParser implements Parser {
         return correctOperation;
     }
 
-    private MyExpression parseShifts() throws IllegalSymbolException {
+    private MyExpression parseShifts() throws IllegalSymbolException, IllegalArgumentException, IllegalOperationException {
         MyExpression current = parseAddOrSubstrac();
         while (notEnd()) {
             OperationType nextOperation = nextOperation();
@@ -126,7 +129,7 @@ public class ExpressionParser implements Parser {
         return current;
     }
 
-    private MyExpression parseAddOrSubstrac() throws IllegalSymbolException {
+    private MyExpression parseAddOrSubstrac() throws IllegalSymbolException, IllegalOperationException, IllegalArgumentException {
         MyExpression current = parseMulOrDiv();
         while (notEnd()) {
             OperationType nextOperation = nextOperation();
@@ -143,7 +146,7 @@ public class ExpressionParser implements Parser {
         return current;
     }
 
-    private MyExpression parseMulOrDiv() throws IllegalSymbolException {
+    private MyExpression parseMulOrDiv() throws IllegalSymbolException, IllegalArgumentException, IllegalOperationException {
         MyExpression current = parsePowOrLog();
         while (notEnd()) {
             OperationType nextOperation = nextOperation();
@@ -160,7 +163,7 @@ public class ExpressionParser implements Parser {
         return current;
     }
 
-    private MyExpression parsePowOrLog() throws IllegalSymbolException {
+    private MyExpression parsePowOrLog() throws IllegalSymbolException, IllegalOperationException, IllegalArgumentException {
         MyExpression current = parseBracket();
         while (notEnd()) {
             OperationType nextOperation = nextOperation();
@@ -177,7 +180,7 @@ public class ExpressionParser implements Parser {
         return current;
     }
 
-    private MyExpression parseBracket() throws IllegalSymbolException {
+    private MyExpression parseBracket() throws IllegalSymbolException, IllegalOperationException, IllegalArgumentException {
         OperationType nextOpertion = nextOperation();
         if (nextOpertion == OperationType.CLOSE_BRACKET) {
             throw new IllegalSymbolException("Illegal operation, find " + nextOpertion);
@@ -190,7 +193,7 @@ public class ExpressionParser implements Parser {
             if (nextOpertion == OperationType.CLOSE_BRACKET) {
                 return current;
             } else {
-                throw new IllegalArgumentException();
+                throw new IllegalOperationException("not found CLOSE_BRACKET");
             }
         }
         if (nextOpertion == OperationType.SUB) {
@@ -205,7 +208,7 @@ public class ExpressionParser implements Parser {
         return parseVariableOrConst(false);
     }
 
-    private MyExpression parseVariableOrConst(boolean f) throws IllegalSymbolException {
+    private MyExpression parseVariableOrConst(boolean f) throws IllegalSymbolException, IllegalOperationException, IllegalArgumentException {
         int sign = parseUnaryMinus(f ? -1 : 1);
         if (nextString("log2")) {
             if (sign == -1) {
@@ -236,7 +239,7 @@ public class ExpressionParser implements Parser {
         StringBuilder x = new StringBuilder();
         for (; i < s.length(); i++) {
             if (!Character.isDigit(s.charAt(i))) {
-                throw new IllegalArgumentException();
+                throw new IllegalArgumentException("expected digit");
             }
             x.append(s.charAt(i));
         }
@@ -275,7 +278,7 @@ public class ExpressionParser implements Parser {
     }
 
     @Override
-    public TripleExpression parse(String expression) throws IllegalSymbolException {
+    public TripleExpression parse(String expression) throws IllegalSymbolException, IllegalOperationException, IllegalArgumentException, IllegalNumberException {
         StringBuilder sb = new StringBuilder();
         StringBuilder brackets = new StringBuilder();
         boolean f = false;
@@ -285,16 +288,16 @@ public class ExpressionParser implements Parser {
         for (int i = 0; i < expression.length(); i++) {
             if (expression.charAt(i) == 'l') {
                 String s = "log2";
-                if (expression.length() - 4 <= i) throw new IllegalSymbolException("found illegal symbol");
+                if (expression.length() - 4 <= i) throw new IllegalOperationException("found illegal operation");
                 for (int j = i; j < i + 4; j++) {
                     sb.append(expression.charAt(j));
                     if (expression.charAt(j) != s.charAt(j - i)) {
-                        throw new IllegalSymbolException("found illegal symbol");
+                        throw new IllegalOperationException("found illegal operation");
                     }
                 }
                 i = i + 3;
                 if (i + 1 == expression.length() || Character.isLetter(expression.charAt(i + 1)) || Character.isDigit(expression.charAt(i + 1))) {
-                    throw new IllegalArgumentException();
+                    throw new  IllegalOperationException("found illegal operation");
                 }
                 g = false;
                 f = false;
@@ -302,7 +305,7 @@ public class ExpressionParser implements Parser {
             }
             if (expression.charAt(i) == 'p') {
                 String s = "pow2";
-                if (expression.length() - 4 <= i) throw new IllegalSymbolException("found illegal symbol");
+                if (expression.length() - 4 <= i) throw new IllegalOperationException("found illegal operation");
                 for (int j = i; j < i + 4; j++) {
                     sb.append(expression.charAt(j));
                     if (expression.charAt(j) != s.charAt(j - i)) {
@@ -311,7 +314,7 @@ public class ExpressionParser implements Parser {
                 }
                 i = i + 3;
                 if (i + 1 == expression.length() || Character.isLetter(expression.charAt(i + 1)) || Character.isDigit(expression.charAt(i + 1))) {
-                    throw new IllegalArgumentException();
+                    throw new IllegalOperationException("found illegal operation");
                 }
                 g = false;
                 f = false;
@@ -323,7 +326,7 @@ public class ExpressionParser implements Parser {
             }
             if (expression.charAt(i) == '*') {
                 if (u && g) {
-                    throw new IllegalSymbolException("Not found operation * *");
+                    throw new IllegalOperationException("found operation * *");
                 }
                 u = true;
             } else {
@@ -331,7 +334,7 @@ public class ExpressionParser implements Parser {
             }
             if (expression.charAt(i) == '/') {
                 if (k && g) {
-                    throw new IllegalSymbolException("not found operation * *");
+                    throw new IllegalOperationException("found operation / /");
                 }
                 k = true;
             } else {
@@ -363,6 +366,12 @@ public class ExpressionParser implements Parser {
         correctOperation = OperationType.NOTHING;
         s = sb.toString();
 //        System.err.println(s);
-        return parseShifts();
+        try {
+            return parseShifts();
+        } catch (NumberFormatException e) {
+            throw new IllegalNumberException("found illegal number");
+        } catch (StringIndexOutOfBoundsException e) {
+            throw new IllegalArgumentException("found illegal argument");
+        }
     }
 }
