@@ -13,12 +13,12 @@ public class BinarySearch {
         }
 //        Pre: left = -1, right = length
 //        Inv: left < index of findVariable <= right && Arr[left] > findVariable >= Arr[right]
-        int ans = searchRecursion(searchArray, findVariable, -1, searchArray.length);
+        int ans = searchRecursionLeft(searchArray, findVariable, -1, searchArray.length);
         // Post: find Variable == Ret && find Variable >= Arr[Ret]
         System.out.println(ans == -1 ? searchArray.length : ans);
     }
 
-    public static int searchCycle(int[] searchArray, int findVariable, int left, int right) {
+    public static int searchCycleLeft(int[] searchArray, int findVariable, int left, int right) {
 //        Pre: left < index of find Variable <= right && Arr[left] > find Variable >= Arr[right]
         while (left + 1 < right) {
 //            Post: left < index of find Variable <= right && left + 1 < right && Arr[left] > find Variable >= Arr[right]
@@ -45,7 +45,7 @@ public class BinarySearch {
         return right;
     }
 
-    public static int searchRecursion(int[] searchArray, int findVariable, int left, int right) {
+    public static int searchRecursionLeft(int[] searchArray, int findVariable, int left, int right) {
 //        Pre: left < index of find Variable <= right && Arr[left] > find Variable >= Arr[right]
         if (left + 1 == right) {
 //            Pre: left + 1 == index of find Variable == right && Arr[left] > find Variable >= Arr[right]
@@ -57,11 +57,11 @@ public class BinarySearch {
 //        Post: left + 1 index of find Variable <= right && left < middle < right && Arr[left] > find Variable >= Arr[right]
         if (searchArray[middle] <= findVariable) {
 //            Pre: left < index of find Variable <= newRight == middle && Arr[left] > find Variable >= Arr[newRight = middle]
-            return searchRecursion(searchArray, findVariable, left, middle);
+            return searchRecursionLeft(searchArray, findVariable, left, middle);
 //            Post: Ret == index of find Variable && Arr[Ret] == find Variable
         } else {
 //            Pre: newLeft == middle < index of find Variable <= right && Arr[newLeft == middle] > find Variable >= Arr[right]
-            return searchRecursion(searchArray, findVariable, middle, right);
+            return searchRecursionLeft(searchArray, findVariable, middle, right);
 //            Post: Ret == index of find Variable && Arr[Ret] == find Variable
         }
     }
