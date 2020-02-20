@@ -7,6 +7,7 @@ import static search.BinarySearch.*;
  */
 
 public class BinarySearchSpan {
+//    Pre: Input.length > 0
     public static void main(String[] args) {
         int findVariable = Integer.parseInt(args[0]);
         int[] searchArray = new int[args.length - 1];
@@ -51,6 +52,7 @@ public class BinarySearchSpan {
         }
 //        Pre: left + 1 == right && Arr[left] = findVariable > Arr[right]
         return left;
+//        Post: Ret == findInd && Arr[Ret] == findVariable
     }
 
     public static int searchRecursionRight(int[] searchArray, int findVariable, int left, int right) {

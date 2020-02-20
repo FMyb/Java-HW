@@ -5,6 +5,7 @@ package search;
  */
 
 public class BinarySearch {
+//    Pre: Input.length > 0
     public static void main(String[] args) {
         int findVariable = Integer.parseInt(args[0]);
         int[] searchArray = new int[args.length - 1];
@@ -18,6 +19,8 @@ public class BinarySearch {
         System.out.println(ans == -1 ? searchArray.length : ans);
     }
 
+//    Pre: Arr is sort, left < findVariable <= right
+//    Post: Ret = Index of find Variable
     public static int searchCycleLeft(int[] searchArray, int findVariable, int left, int right) {
 //        Pre: left < index of find Variable <= right && Arr[left] > find Variable >= Arr[right]
         while (left + 1 < right) {
@@ -38,6 +41,7 @@ public class BinarySearch {
             } else {
 //                Post: left < index of find Variable <= right && left + 1 < right && left < middle < right
 //                 && Arr[left] > find Variable >= Arr[right] && Arr[middle] > find Variable
+
 //                Pre: left < index of find Variable <= right && left + 1 < right && left < middle < right
 //                  && Arr[left] > find Variable >= Arr[right] && Arr[middle] > find Variable
                 left = middle;
@@ -45,10 +49,12 @@ public class BinarySearch {
             }
 //            Post: Arr[Left] > find Variable >= Arr[newRight] && newLeft < find Variable <= newRight, |new Left - new Right| < |left - right|
         }
-        // Post: left + 1 = find Variable = right &&  Arr[left] > find Variable >= Arr[right]
+        // Post: find Variable = right
         return right;
     }
 
+//    Pre: Arr is sort, left < findVariable <= right
+//    Post: Ret = Index of find Variable
     public static int searchRecursionLeft(int[] searchArray, int findVariable, int left, int right) {
 //        Pre: left < index of find Variable <= right && Arr[left] > find Variable >= Arr[right]
         if (left + 1 == right) {
