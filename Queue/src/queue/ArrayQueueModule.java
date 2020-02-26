@@ -41,7 +41,7 @@ public class ArrayQueueModule {
         return ans;
     }
 
-    public  static int size() {
+    public static int size() {
         return abs(tail - head);
     }
 
