@@ -11,25 +11,26 @@ import static java.lang.Math.abs;
 public class ArrayQueueModule {
     private static int tail = 0;
     private static int head = 0;
-    private static int capacity = 5;
     private static Object[] elements = new Object[4];
 
     public static void enqueue(Object element) {
         assert element != null;
-        ensureCapacity(size() + 1);
+        ensureCapacity();
         elements[tail] = element;
-        tail = (tail + 1) % capacity;
+        tail = (tail + 1) % elements.length;
+//        print();
     }
 
-    private static void ensureCapacity(int size) {
-        if (size >= capacity) {
-            Object[] temp = new Object[2 * size];
+    private static void ensureCapacity() {
+        if ((tail + 1) % elements.length == head) {
+            Object[] temp = new Object[2 * elements.length];
             int j = 0;
-            for (int i = head; i < tail; i = (i + 1) % size, j++) {
+            for (int i = head; i != tail; i = (i + 1) % elements.length, j++) {
                 temp[j] = elements[i];
             }
-            capacity = size * 2;
-            elements = Arrays.copyOf(temp, capacity);
+            head = 0;
+            tail = j;
+            elements = Arrays.copyOf(temp, temp.length);
         }
     }
 
@@ -37,12 +38,13 @@ public class ArrayQueueModule {
         assert size() > 0;
         Object ans = elements[head];
         elements[head] = null;
-        head = (head + 1) % capacity;
+        head = (head + 1) % elements.length;
+//        print();
         return ans;
     }
 
     public static int size() {
-        return abs(tail - head);
+        return (tail - head + elements.length) % elements.length;
     }
 
     public static Object element() {
@@ -58,7 +60,6 @@ public class ArrayQueueModule {
         head = 0;
         tail = 0;
         elements = new Object[5];
-        capacity = 5;
     }
 
 }
