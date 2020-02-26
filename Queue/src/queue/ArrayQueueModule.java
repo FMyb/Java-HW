@@ -22,7 +22,7 @@ public class ArrayQueueModule {
     }
 
     private static void ensureCapacity(int size) {
-        if (size > capacity) {
+        if (size >= capacity) {
             Object[] temp = new Object[2 * size];
             int j = 0;
             for (int i = head; i < tail; i = (i + 1) % size, j++) {
