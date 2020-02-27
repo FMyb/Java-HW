@@ -19,7 +19,7 @@ public class BinarySearch {
         System.out.println(ans == -1 ? searchArray.length : ans);
     }
 
-//    Pre: Arr is sort, left < findVariable <= right
+//    Pre: Arr is sort, -1 <= left < findVariable <= right <= arr.length
 //    Post: Ret = Index of find Variable
     public static int searchCycleLeft(int[] searchArray, int findVariable, int left, int right) {
 //        Pre: left < index of find Variable <= right && Arr[left] > find Variable >= Arr[right]

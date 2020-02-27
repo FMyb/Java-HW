@@ -31,12 +31,14 @@ public class ArrayQueueADT {
     private static void ensureCapacity(ArrayQueueADT queue) {
         if ((queue.tail + 1) % queue.elements.length == queue.head) {
             Object[] temp = new Object[2 * queue.elements.length];
-            int j = 0;
-            for (int i = queue.head; i != queue.tail; i = (i + 1) % queue.elements.length, j++) {
-                temp[j] = queue.elements[i];
+            if (queue.head > queue.tail) {
+                System.arraycopy(queue.elements, queue.head, temp, 0, queue.elements.length - queue.head);
+                System.arraycopy(queue.elements, 0, temp, queue.elements.length - queue.head, queue.tail);
+            } else {
+                System.arraycopy(queue.elements, queue.head, temp, queue.head, queue.tail - queue.head);
             }
+            queue.tail = size(queue);
             queue.head = 0;
-            queue.tail = j;
             queue.elements = Arrays.copyOf(temp, temp.length);
         }
     }

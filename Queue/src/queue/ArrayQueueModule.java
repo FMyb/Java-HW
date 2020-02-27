@@ -14,7 +14,7 @@ public class ArrayQueueModule {
     private static Object[] elements = new Object[4];
 //    E = [e1...en]
 
-    //    Pre: true
+    //    Pre: element != null
 //    Post: E'= [e1, ..., en, e]
     public static void enqueue(Object element) {
         assert element != null;
@@ -24,7 +24,7 @@ public class ArrayQueueModule {
         tail = (tail + 1) % elements.length;
     }
 
-    //    Pre: true
+    //    Pre: element != null
 //    Post: E' = [e, e1, ... en]
     public static void push(Object element) {
         assert element != null;
@@ -39,12 +39,14 @@ public class ArrayQueueModule {
     private static void ensureCapacity() {
         if ((tail + 1) % elements.length == head) {
             Object[] temp = new Object[2 * elements.length];
-            int j = 0;
-            for (int i = head; i != tail; i = (i + 1) % elements.length, j++) {
-                temp[j] = elements[i];
+            if (head > tail) {
+                System.arraycopy(elements, head, temp, 0, elements.length - head);
+                System.arraycopy(elements, 0, temp, elements.length - head, tail);
+            } else {
+                System.arraycopy(elements, head, temp, head, tail - head);
             }
+            tail = size();
             head = 0;
-            tail = j;
             elements = Arrays.copyOf(temp, temp.length);
         }
     }
@@ -102,7 +104,7 @@ public class ArrayQueueModule {
     public static void clear() {
         head = 0;
         tail = 0;
-        elements = new Object[5];
+        elements = new Object[4];
     }
 
 }

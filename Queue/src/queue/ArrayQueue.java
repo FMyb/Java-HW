@@ -31,12 +31,14 @@ public class ArrayQueue {
     private void ensureCapacity() {
         if ((tail + 1) % elements.length == head) {
             Object[] temp = new Object[2 * elements.length];
-            int j = 0;
-            for (int i = head; i != tail; i = (i + 1) % elements.length, j++) {
-                temp[j] = elements[i];
+            if (head > tail) {
+                System.arraycopy(elements, head, temp, 0, elements.length - head);
+                System.arraycopy(elements, 0, temp, elements.length - head, tail);
+            } else {
+                System.arraycopy(elements, head, temp, head, tail - head);
             }
+            tail = size();
             head = 0;
-            tail = j;
             elements = Arrays.copyOf(temp, temp.length);
         }
     }
