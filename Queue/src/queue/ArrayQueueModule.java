@@ -19,8 +19,19 @@ public class ArrayQueueModule {
     public static void enqueue(Object element) {
         assert element != null;
         ensureCapacity();
+//        System.err.println("enqueue " + element);
         elements[tail] = element;
         tail = (tail + 1) % elements.length;
+    }
+
+    //    Pre: true
+//    Post: E' = [e, e1, ... en]
+    public static void push(Object element) {
+        assert element != null;
+//        System.err.println("push " + element);
+        ensureCapacity();
+        head = (head - 1 + elements.length) % elements.length;
+        elements[head] = element;
     }
 
     //    Pre: true
@@ -38,11 +49,23 @@ public class ArrayQueueModule {
         }
     }
 
+    //    Pre : size() > 0
+//    Post: R = e[n] & E' = [e1..en-1]
+    public static Object remove() {
+        assert size() > 0;
+        tail = (tail - 1 + elements.length) % elements.length;
+        Object ans = elements[tail];
+//        System.err.println("remove");
+        elements[tail] = null;
+        return ans;
+    }
+
     //    Pre: |E| > 0
 //    Post: R = e[1] & E' = [e2..en]
     public static Object dequeue() {
         assert size() > 0;
         Object ans = elements[head];
+//        System.err.println("dequeue");
         elements[head] = null;
         head = (head + 1) % elements.length;
         return ans;
@@ -52,6 +75,13 @@ public class ArrayQueueModule {
 //    Post: R = |E|
     public static int size() {
         return (tail - head + elements.length) % elements.length;
+    }
+
+    //    Pre: size > 0
+//    Post: R = en
+    public static Object peek() {
+        assert size() > 0;
+        return elements[(tail - 1 + elements.length) % elements.length];
     }
 
     //    Pre: |E| > 0

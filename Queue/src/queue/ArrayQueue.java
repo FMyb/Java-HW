@@ -18,6 +18,15 @@ public class ArrayQueue {
     }
 
     //    Pre: true
+//    Post: E' = [e, e1, ... en]
+    public void push(Object element) {
+        assert element != null;
+        ensureCapacity();
+        head = (head - 1 + elements.length) % elements.length;
+        elements[head] = element;
+    }
+
+    //    Pre: true
 //    Post: |E'| = 2*|E|
     private void ensureCapacity() {
         if ((tail + 1) % elements.length == head) {
@@ -32,6 +41,16 @@ public class ArrayQueue {
         }
     }
 
+    //    Pre : size() > 0
+//    Post: R = e[n] & E' = [e1..en-1]
+    public Object remove() {
+        assert size() > 0;
+        tail = (tail - 1 + elements.length) % elements.length;
+        Object ans = elements[tail];
+        elements[tail] = null;
+        return ans;
+    }
+
     //    Pre: |E| > 0
 //    Post: R = e[1] & E' = [e2..en]
     public Object dequeue() {
@@ -39,9 +58,6 @@ public class ArrayQueue {
         Object ans = elements[head];
         elements[head] = null;
         head = (head + 1) % elements.length;
-        if (head == tail) {
-            clear();
-        }
         return ans;
     }
 
@@ -49,6 +65,13 @@ public class ArrayQueue {
 //    Post: R = |E|
     public int size() {
         return (tail - head + elements.length) % elements.length;
+    }
+
+    //    Pre: size > 0
+//    Post: R = en
+    public Object peek() {
+        assert size() > 0;
+        return elements[(tail - 1 + elements.length) % elements.length];
     }
 
     //    Pre: |E| > 0

@@ -23,6 +23,8 @@ public class ArrayQueueModuleTest {
     public static void main(String[] args) {
         fill();
         dump();
+        ArrayQueueModule.push(1);
+        System.err.println(ArrayQueueModule.element());
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         for (int i = 0; i < n; i++) {
