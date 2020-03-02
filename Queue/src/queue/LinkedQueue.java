@@ -4,8 +4,7 @@ package queue;
  * @author Yaroslav Ilin
  */
 
-public class LinkedQueue implements Queue {
-    private int size;
+public class LinkedQueue extends AbstractQueue {
     private Node top;
     private Node tail;
 
@@ -13,10 +12,12 @@ public class LinkedQueue implements Queue {
     public void enqueue(Object element) {
         size++;
         Node newTail = new Node(element, null);
-        tail.next = newTail;
-        tail = newTail;
-        if (size == 0) {
+        if (size == 1) {
+            tail = newTail;
             top = tail;
+        } else {
+            tail.next = newTail;
+            tail = newTail;
         }
     }
 
@@ -33,19 +34,9 @@ public class LinkedQueue implements Queue {
     }
 
     @Override
-    public int size() {
-        return size;
-    }
-
-    @Override
     public Object element() {
         assert size > 0;
         return top.value;
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return size == 0;
     }
 
     @Override
