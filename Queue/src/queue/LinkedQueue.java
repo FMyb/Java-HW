@@ -1,5 +1,8 @@
 package queue;
 
+import java.util.function.Function;
+import java.util.function.Predicate;
+
 /**
  * @author Yaroslav Ilin
  */
@@ -55,5 +58,10 @@ public class LinkedQueue extends AbstractQueue {
             this.value = value;
             this.next = next;
         }
+    }
+
+    @Override
+    public Queue factory() {
+        return new LinkedQueue();
     }
 }

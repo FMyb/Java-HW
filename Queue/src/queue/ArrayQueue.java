@@ -1,6 +1,8 @@
 package queue;
 
 import java.util.Arrays;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class ArrayQueue extends AbstractQueue {
     private int head = 0;
@@ -60,5 +62,10 @@ public class ArrayQueue extends AbstractQueue {
         head = 0;
         size = 0;
         elements = new Object[4];
+    }
+
+    @Override
+    public Queue factory() {
+        return new ArrayQueue();
     }
 }

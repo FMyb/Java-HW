@@ -1,5 +1,8 @@
 package queue;
 
+import java.util.function.Function;
+import java.util.function.Predicate;
+
 /**
  * @author Yaroslav Ilin
  */
@@ -29,4 +32,12 @@ public interface Queue {
     //    Pre: true
 //    Post: |E| = 0
     void clear();
+
+    //    Pre: function != null;
+//    Ret: E' = [e'i = function(ei)]
+    Queue map(Function<Object, Object> function);
+
+    //    Pre: predicate != null;
+//    Ret: E' = [ei, predicate(ei) == true]
+    Queue filter(Predicate<Object> predicate);
 }
