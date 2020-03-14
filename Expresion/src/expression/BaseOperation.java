@@ -3,20 +3,20 @@ package expression;
 
 import expression.exceptions.DBZEEException;
 import expression.exceptions.OverflowEEException;
+import expression.generic.Calculator;
 
+import java.math.BigInteger;
 import java.util.function.BinaryOperator;
 
-public abstract class BaseOperation extends AbstractExpression implements Operation {
+public abstract class BaseOperation<T extends Number> extends AbstractExpression<T> implements Operation<T> {
     private final String operation;
-    private final BinaryOperator<Integer> operatorLong;
-    private final BinaryOperator<Double> operatorDouble;
+    private final BinaryOperator<T> operator;
 
-    public BaseOperation(final MyExpression firstArgument, final MyExpression secondArgument, final String operation,
-                         final BinaryOperator<Integer> operatorLong, final BinaryOperator<Double> operatorDouble) {
+    public BaseOperation(final MyExpression<T> firstArgument, final MyExpression<T> secondArgument, final String operation,
+                         final BinaryOperator<T> operator) {
         super(firstArgument, secondArgument);
         this.operation = operation;
-        this.operatorLong = operatorLong;
-        this.operatorDouble = operatorDouble;
+        this.operator = operator;
     }
 
     @Override
@@ -63,7 +63,7 @@ public abstract class BaseOperation extends AbstractExpression implements Operat
         return sb.toString();
     }
 
-    private void check(StringBuilder sb, MyExpression argument, Position pos) {
+    private void check(StringBuilder sb, MyExpression<T> argument, Position pos) {
         if (argument.getClass() == Const.class || argument.getClass() == Variable.class
                 || argument.getClass() == Multiply.class || argument.getClass() == Divide.class && pos == Position.FIRST) {
             argument.setV(false);
@@ -77,13 +77,13 @@ public abstract class BaseOperation extends AbstractExpression implements Operat
 
     @Override
     public int evaluate(int x) {
-        return operatorLong.apply(firstArgument.evaluate(x), secondArgument.evaluate(x));
+        return 0;
 
     }
 
     @Override
     public double evaluate(double x) {
-        return operatorDouble.apply(firstArgument.evaluate(x), secondArgument.evaluate(x));
+        return 0;
     }
 
     public int calcwithcheckcorrect(int x, int y) throws OverflowEEException, DBZEEException {
@@ -103,16 +103,16 @@ public abstract class BaseOperation extends AbstractExpression implements Operat
             return x - y;
         }
         if (operation.equals("*")) {
-            if (1L * x * y > 1L* Integer.MAX_VALUE || 1L * x * y < 1L * Integer.MIN_VALUE) {
-                throw new OverflowEEException("overflow");
-            }
-            return x * y;
+            return Multiply.checkCorrect(x, y);
         }
         if (operation.equals("/")) {
-            if (x == Integer.MIN_VALUE && y == -1 || y == 0) {
-                throw new OverflowEEException("overflow");
-            }
-            return x / y;
+            return Divide.checkCorrect(x, y);
+        }
+        if (operation.equals("max")) {
+            return Math.max(x, y);
+        }
+        if (operation.equals("min")) {
+            return Math.min(x, y);
         }
         throw new IllegalArgumentException();
     }
@@ -122,5 +122,12 @@ public abstract class BaseOperation extends AbstractExpression implements Operat
         int calcFirst = firstArgument.evaluate(x, y, z);
         int calcSecond = secondArgument.evaluate(x, y, z);
         return calcwithcheckcorrect(calcFirst, calcSecond);
+    }
+
+    @Override
+    public T calc(T x, T y, T z) {
+        T calcFirst = firstArgument.calc(x, y, z);
+        T calcSecond = secondArgument.calc(x, y, z);
+        return operator.apply(calcFirst, calcSecond);
     }
 }

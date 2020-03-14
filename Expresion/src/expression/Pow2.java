@@ -1,3 +1,4 @@
+/*
 package expression;
 
 import expression.exceptions.DBZEEException;
@@ -71,3 +72,4 @@ public class Pow2 implements MyExpression {
         return 1 << k;
     }
 }
+*/

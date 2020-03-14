@@ -2,12 +2,12 @@ package expression;
 
 import java.util.Objects;
 
-public abstract class AbstractExpression implements MyExpression {
-    final protected MyExpression firstArgument;
-    final protected MyExpression secondArgument;
+public abstract class AbstractExpression<T extends Number> implements MyExpression<T> {
+    final protected MyExpression<T> firstArgument;
+    final protected MyExpression<T> secondArgument;
     protected boolean f = true;
 
-    public AbstractExpression(final MyExpression firstArgument, final MyExpression secondArgument) {
+    public AbstractExpression(final MyExpression<T> firstArgument, final MyExpression<T> secondArgument) {
         this.firstArgument = firstArgument;
         this.secondArgument = secondArgument;
     }
@@ -18,7 +18,7 @@ public abstract class AbstractExpression implements MyExpression {
     }
 
 //    @Override
-    private boolean equals(MyExpression other) {
+    private boolean equals(MyExpression<T> other) {
         return this.toString().equals(other.toString());
     }
 
@@ -27,7 +27,7 @@ public abstract class AbstractExpression implements MyExpression {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 //        return this.toString().equals(o.toString());
-        AbstractExpression that = (AbstractExpression) o;
+        AbstractExpression<T> that = (AbstractExpression<T>) o;
         return this.equals(that);
     }
 
@@ -35,4 +35,6 @@ public abstract class AbstractExpression implements MyExpression {
     public int hashCode() {
         return Objects.hash(this.toString());
     }
+
+
 }

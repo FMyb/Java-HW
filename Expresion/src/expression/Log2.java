@@ -1,3 +1,4 @@
+/*
 package expression;
 
 import expression.exceptions.DBZEEException;
@@ -79,3 +80,4 @@ public class Log2 implements MyExpression {
         return ans;
     }
 }
+*/

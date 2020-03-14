@@ -40,11 +40,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Java-HW" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Java-HW/Expresion" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -60,7 +60,7 @@
       <command value="git" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.ExceptionsPowLogTest">
+  <component name="RunManager" selected="Application.GenericCmmUlsTest">
     <configuration name="ExceptionsPowLog2Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="expression.parser.ExceptionsPowLog2Test" />
       <module name="Expresion" />
@@ -75,13 +75,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExceptionsPowLogTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="expression.parser.ExceptionsPowLogTest" />
+    <configuration name="GenericCmmTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="expression.generic.GenericCmmTest" />
       <module name="Expresion" />
       <option name="VM_PARAMETERS" value="-ea" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="expression.parser.*" />
+          <option name="PATTERN" value="expression.generic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -89,13 +89,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExceptionsTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="expression.parser.ExceptionsTest" />
+    <configuration name="GenericCmmUlsTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="expression.generic.GenericCmmUlsTest" />
       <module name="Expresion" />
       <option name="VM_PARAMETERS" value="-ea" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="expression.parser.*" />
+          <option name="PATTERN" value="expression.generic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GenericTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="expression.generic.GenericTest" />
+      <module name="Expresion" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="expression.generic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -110,34 +124,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParserAbsSquareTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="expression.parser.ParserAbsSquareTest" />
-      <module name="Expresion" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="expression.parser.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.ParserAbsSquareTest" />
-      <item itemvalue="Application.ExceptionsTest" />
       <item itemvalue="Application.ExceptionsPowLog2Test" />
-      <item itemvalue="Application.ExceptionsPowLogTest" />
+      <item itemvalue="Application.GenericTest" />
+      <item itemvalue="Application.GenericCmmTest" />
+      <item itemvalue="Application.GenericCmmUlsTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ExceptionsPowLogTest" />
+        <item itemvalue="Application.GenericCmmUlsTest" />
+        <item itemvalue="Application.GenericCmmTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.GenericTest" />
         <item itemvalue="Application.ExceptionsPowLog2Test" />
-        <item itemvalue="Application.ExceptionsTest" />
-        <item itemvalue="Application.ParserAbsSquareTest" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +178,15 @@
       <workItem from="1581352996376" duration="13023000" />
       <workItem from="1581435667033" duration="10059000" />
       <workItem from="1581671152240" duration="10044000" />
-      <workItem from="1582125324872" duration="1080000" />
+      <workItem from="1582125324872" duration="1426000" />
+      <workItem from="1582198648666" duration="5842000" />
+      <workItem from="1582569785045" duration="950000" />
+      <workItem from="1582807689482" duration="3234000" />
+      <workItem from="1583873845896" duration="3881000" />
+      <workItem from="1583922713297" duration="6646000" />
+      <workItem from="1584015132638" duration="6195000" />
+      <workItem from="1584191990657" duration="6568000" />
+      <workItem from="1584198925273" duration="11169000" />
     </task>
     <task id="LOCAL-00001" summary="Arithmetical Java parser">
       <created>1580371965556</created>
@@ -223,6 +231,8 @@
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
+      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/../Java-HW" />
     </ignored-roots>
     <MESSAGE value="Arithmetical Java parser" />
     <option name="LAST_COMMIT_MESSAGE" value="Arithmetical Java parser" />
@@ -232,18 +242,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="367" y="72" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1581353164002" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581675286562">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584019251098">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1581675286562" />
-    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1582126310781">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1584019251098" />
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1584221056130">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1582126310781" />
-    <state x="573" y="298" width="403" height="236" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1581675246016">
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1584221056130" />
+    <state x="573" y="298" width="403" height="236" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1582570617848">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="573" y="298" width="403" height="236" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1581675246016" />
+    <state x="573" y="298" width="403" height="236" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1582570617848" />
     <state x="393" y="6" key="CommitChangelistDialog2" timestamp="1580913065771">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -252,58 +262,58 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1580914434629" />
-    <state x="588" y="167" key="FileChooserDialogImpl" timestamp="1581353176761">
+    <state x="588" y="167" key="FileChooserDialogImpl" timestamp="1584221449666">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="588" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1581353176761" />
-    <state x="603" y="328" width="354" height="168" key="Github.CreateGistDialog" timestamp="1576787627934">
+    <state x="588" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584221449666" />
+    <state x="603" y="328" width="354" height="186" key="Github.CreateGistDialog" timestamp="1584198462327">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="603" y="328" width="354" height="168" key="Github.CreateGistDialog/0.0.1536.824@0.0.1536.824" timestamp="1576787627934" />
-    <state width="1493" height="167" key="GridCell.Tab.0.bottom" timestamp="1582126412167">
+    <state x="603" y="328" width="354" height="186" key="Github.CreateGistDialog/0.0.1536.824@0.0.1536.824" timestamp="1584198462327" />
+    <state width="1493" height="258" key="GridCell.Tab.0.bottom" timestamp="1584221450631">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="167" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582126412167" />
-    <state width="1493" height="167" key="GridCell.Tab.0.center" timestamp="1582126412167">
+    <state width="1493" height="258" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584221450631" />
+    <state width="1493" height="258" key="GridCell.Tab.0.center" timestamp="1584221450631">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="167" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582126412167" />
-    <state width="1493" height="167" key="GridCell.Tab.0.left" timestamp="1582126412166">
+    <state width="1493" height="258" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584221450631" />
+    <state width="1493" height="258" key="GridCell.Tab.0.left" timestamp="1584221450631">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="167" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582126412166" />
-    <state width="1493" height="167" key="GridCell.Tab.0.right" timestamp="1582126412167">
+    <state width="1493" height="258" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584221450631" />
+    <state width="1493" height="258" key="GridCell.Tab.0.right" timestamp="1584221450631">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="167" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582126412167" />
-    <state width="1493" height="258" key="GridCell.Tab.1.bottom" timestamp="1581694489199">
+    <state width="1493" height="258" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584221450631" />
+    <state width="1493" height="258" key="GridCell.Tab.1.bottom" timestamp="1584221450632">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581694489199" />
-    <state width="1493" height="258" key="GridCell.Tab.1.center" timestamp="1581694489198">
+    <state width="1493" height="258" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584221450632" />
+    <state width="1493" height="258" key="GridCell.Tab.1.center" timestamp="1584221450631">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1581694489198" />
-    <state width="1493" height="258" key="GridCell.Tab.1.left" timestamp="1581694489198">
+    <state width="1493" height="258" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1584221450631" />
+    <state width="1493" height="258" key="GridCell.Tab.1.left" timestamp="1584221450631">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1581694489198" />
-    <state width="1493" height="258" key="GridCell.Tab.1.right" timestamp="1581694489198">
+    <state width="1493" height="258" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1584221450631" />
+    <state width="1493" height="258" key="GridCell.Tab.1.right" timestamp="1584221450632">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1581694489198" />
-    <state x="277" y="0" key="SettingsEditor" timestamp="1581353181810">
+    <state width="1493" height="258" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1584221450632" />
+    <state x="277" y="0" key="SettingsEditor" timestamp="1584221667106">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1581353181810" />
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1584221667106" />
     <state x="527" y="116" key="VCS.ChangeListViewerDialog" timestamp="1580914304094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="527" y="116" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1580914304094" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1582125351623">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1584198924232">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1582125351623" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584198924232" />
     <state x="498" y="305" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1576178530052">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -312,22 +322,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="276" key="git4idea.rebase.GitRebaseDialog/0.0.1536.824@0.0.1536.824" timestamp="1580914307790" />
+    <state x="209" y="34" key="new project wizard" timestamp="1584027456895">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="34" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1584027456895" />
     <state x="455" y="258" width="705" height="307" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1576584685962">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="455" y="258" width="705" height="307" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1536.824@0.0.1536.824" timestamp="1576584685962" />
-    <state x="475" y="40" key="refactoring.ChangeSignatureDialog" timestamp="1576231036873">
+    <state x="475" y="7" key="refactoring.ChangeSignatureDialog" timestamp="1584204279027">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="475" y="40" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1576231036873" />
-    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1580916210292">
+    <state x="475" y="7" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1584204279027" />
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1583932411972">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1580916210292" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1581365743900">
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1583932411972" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1584213758620">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1581365743900" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1584213758620" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -339,12 +353,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/expression/Variable.java</url>
-          <line>22</line>
+          <line>23</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/expression/Main.java</url>
-          <line>11</line>
+          <line>14</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -354,13 +368,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/expression/Log2.java</url>
-          <line>75</line>
+          <line>76</line>
           <option name="timeStamp" value="109" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/expression/parser/ExpressionParser.java</url>
-          <line>369</line>
-          <option name="timeStamp" value="113" />
+          <url>file://$PROJECT_DIR$/src/expression/generic/GenericTest.java</url>
+          <line>121</line>
+          <option name="timeStamp" value="111" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -369,6 +383,7 @@
         <watch expression="s.charAt(position)" language="JAVA" />
         <watch expression="this.s" language="JAVA" />
         <watch expression="1 &lt;&lt; i" language="JAVA" />
+        <watch expression="position" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

@@ -1,3 +1,4 @@
+/*
 package expression;
 
 import expression.exceptions.DBZEEException;
@@ -13,6 +14,22 @@ public class Pow extends BaseOperation {
         super(firstArgument, secondArgument, "**", Integer::sum, Double::sum);
     }
 
+    private int power(int x, int y) throws OverflowEEException {
+        if (y == 0) {
+            return 1;
+        }
+        if (y == 1) {
+            return x;
+        }
+        if (y % 2 == 0) {
+            int ans = power(x, y / 2);
+            return Multiply.checkCorrect(ans, ans);
+        } else {
+            int ans = power(x, y / 2);
+            return Multiply.checkCorrect(x, Multiply.checkCorrect(ans, ans));
+        }
+    }
+
     @Override
     public int evaluate(int x, int y, int z) throws OverflowEEException, DBZEEException {
         int ans = 1;
@@ -21,12 +38,7 @@ public class Pow extends BaseOperation {
         if (second < 0 || (first == 0 && second == 0)) {
             throw new IllegalArgumentException();
         }
-        for (int i = 0; i < second; i++) {
-            if (1L * ans * first > 1L* Integer.MAX_VALUE || 1L * ans * first < 1L * Integer.MIN_VALUE) {
-                throw new OverflowEEException("overflow");
-            }
-            ans *= first;
-        }
-        return ans;
+        return power(first, second);
     }
 }
+*/

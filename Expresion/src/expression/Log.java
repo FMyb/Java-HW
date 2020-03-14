@@ -1,3 +1,4 @@
+/*
 package expression;
 
 import expression.exceptions.DBZEEException;
@@ -32,3 +33,4 @@ public class Log extends BaseOperation{
         return ans;
     }
 }
+*/

@@ -33,7 +33,7 @@ public interface Queue {
 //    Post: |E| = 0
     void clear();
 
-    //    Pre: function != null;
+    //    Pre: function != null; ret func != null;
 //    Ret: E' = [e'i = function(ei)]
     Queue map(Function<Object, Object> function);
 

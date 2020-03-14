@@ -1,4 +1,4 @@
 package expression;
 
-public interface Operation extends MyExpression {
+public interface Operation<T extends Number> extends MyExpression<T> {
 }

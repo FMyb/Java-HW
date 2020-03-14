@@ -4,7 +4,7 @@ package expression.exceptions;
  * @author Yaroslav Ilin
  */
 
-public class EEException extends Exception {
+public class EEException extends RuntimeException {
     public EEException(String message) {
         super(message);
     }

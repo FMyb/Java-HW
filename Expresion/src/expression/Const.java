@@ -1,35 +1,27 @@
 package expression;
 
+import java.math.BigInteger;
 import java.util.Objects;
 
-public class Const implements MyExpression {
-    private int valueInt;
-    private boolean isValueInt = false;
-    private double valueDouble;
-    private boolean isValueDouble;
+public class Const<T extends Number> implements MyExpression<T> {
+    private final Number value;
     private boolean f = true;
 
-    public Const(int valueInt) {
-        this.valueInt = valueInt;
-        this.isValueInt = true;
-    }
-
-    public Const(double valueDouble) {
-        this.valueDouble = valueDouble;
-        this.isValueDouble = true;
+    public Const(Number value) {
+        this.value = value;
     }
 
     @Override
     public int evaluate(int x) {
-        return valueInt;
+        return (int) value;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Const aConst = (Const) o;
-        return valueInt == aConst.valueInt;
+        Number aConst = (Number) o;
+        return value.equals(o);
     }
 
     @Override
@@ -42,6 +34,12 @@ public class Const implements MyExpression {
         this.f = f;
     }
 
+    @Override
+    public T calc(T x, T y, T z) {
+        return (T) value;
+    }
+
+
 //    @Override
 //    public String toString() {
 //        return valueInt >= 0 ? String.valueOf(valueInt) : '(' + String.valueOf(valueInt) + ')';
@@ -53,7 +51,7 @@ public class Const implements MyExpression {
 //    }
     @Override
     public String toString(){
-        return isValueInt ? String.valueOf(valueInt) : String.valueOf(valueDouble);
+        return String.valueOf(value);
     }
 
     @Override
@@ -63,15 +61,11 @@ public class Const implements MyExpression {
 
     @Override
     public double evaluate(double x) {
-        if (isValueDouble){
-            return valueDouble;
-        } else {
-            return valueInt;
-        }
+        return (double) value;
     }
 
     @Override
     public int evaluate(int x, int y, int z) {
-        return valueInt;
+        return (int) value;
     }
 }
