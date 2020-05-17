@@ -1,7 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7840f90-d76d-4c44-8714-3933ef6574c2" name="Default Changelist" comment="" />
+    <list default="true" id="b7840f90-d76d-4c44-8714-3933ef6574c2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/expression/AbstractExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/Add.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/BaseOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/Const.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/Count.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/Divide.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/DoubleExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/Expression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/Log2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/Max.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/Min.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/Multiply.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/MyExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/Operation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/Subtract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/ToMiniString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/TripleExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/Variable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/base/Asserts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/base/MainChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/base/MainFilesChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/base/MainStdChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/base/Pair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/base/Randomized.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/base/TestCounter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/DBZEEException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/EEException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/IllegalArgumentException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/IllegalNumberException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/IllegalOperationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/IllegalSymbolException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/OverflowEEException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/PEException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/generic/AbstractCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/generic/BigIntegerCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/generic/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/generic/DoubleCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/generic/GenericCmmTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/generic/GenericCmmUlsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/generic/GenericTabulator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/generic/GenericTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/generic/GenericUlsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/generic/IntegerCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/generic/LongCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/generic/ShortCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/generic/Tabulator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/generic/UnckeckedIntegerCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/parser/CheckedAdd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/parser/CheckedDivide.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/parser/CheckedMultiply.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/parser/CheckedNegate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/parser/CheckedSubtract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/parser/Either.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/parser/ExceptionsPowLog2Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/parser/ExceptionsPowLogTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/parser/ExceptionsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/parser/ExpressionParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/parser/OperationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/parser/Parser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/parser/ParserAbsSquareTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/parser/ParserShiftsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/parser/ParserTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,13 +90,12 @@
         <option value="@y_b" />
       </list>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src" />
   </component>
   <component name="ProjectId" id="1UX0oOHEXdkW350Iob9z5UkizSR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -40,19 +106,24 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Java-HW/Expresion" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/paradigms-2020-solutions/java-solutions" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\work IntelJ IDEA\Expresion\src" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\work IntelJ IDEA\Java-HW\Expresion" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="expression.parser" />
       <recent name="expression" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\work IntelJ IDEA\Java-HW\Expresion\paradigms-2020-solutions\java-solutions" />
+      <recent name="E:\work IntelJ IDEA\Java-HW\Expresion\src\paradigms-2020-solutions\java-solutions" />
+      <recent name="E:\work IntelJ IDEA\Expresion\src" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -60,21 +131,7 @@
       <command value="git" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.GenericCmmUlsTest">
-    <configuration name="ExceptionsPowLog2Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="expression.parser.ExceptionsPowLog2Test" />
-      <module name="Expresion" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="expression.parser.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="GenericCmmTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="expression.generic.GenericCmmTest" />
       <module name="Expresion" />
@@ -117,6 +174,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Expresion" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="expression.Main" />
       <module name="Expresion" />
@@ -124,34 +188,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <setting name="replType" value="NREPL" />
+      <setting name="execution" value="LEININGEN" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="" />
+      <setting name="fixLineNumbers" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="host" value="" />
+      <setting name="port" value="0" />
+      <setting name="replType" value="SOCKET" />
+      <setting name="configType" value="SPECIFY" />
+      <setting name="fixLineNumbers" value="false" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.ExceptionsPowLog2Test" />
       <item itemvalue="Application.GenericTest" />
       <item itemvalue="Application.GenericCmmTest" />
       <item itemvalue="Application.GenericCmmUlsTest" />
+      <item itemvalue="Application.Main (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.GenericCmmUlsTest" />
         <item itemvalue="Application.GenericCmmTest" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.GenericTest" />
-        <item itemvalue="Application.ExceptionsPowLog2Test" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\nezna_z2q2mx9\AppData\Roaming\Subversion</configuration>
@@ -187,6 +258,11 @@
       <workItem from="1584015132638" duration="6195000" />
       <workItem from="1584191990657" duration="6568000" />
       <workItem from="1584198925273" duration="11169000" />
+      <workItem from="1584475273143" duration="2218000" />
+      <workItem from="1585166332729" duration="2049000" />
+      <workItem from="1586198407563" duration="5050000" />
+      <workItem from="1587475650745" duration="55000" />
+      <workItem from="1587475737849" duration="73000" />
     </task>
     <task id="LOCAL-00001" summary="Arithmetical Java parser">
       <created>1580371965556</created>
@@ -220,13 +296,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -262,77 +337,85 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1580914434629" />
-    <state x="588" y="167" key="FileChooserDialogImpl" timestamp="1584221449666">
+    <state x="588" y="167" key="FileChooserDialogImpl" timestamp="1584475532041">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="588" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584221449666" />
+    <state x="588" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584475532041" />
     <state x="603" y="328" width="354" height="186" key="Github.CreateGistDialog" timestamp="1584198462327">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="603" y="328" width="354" height="186" key="Github.CreateGistDialog/0.0.1536.824@0.0.1536.824" timestamp="1584198462327" />
-    <state width="1493" height="258" key="GridCell.Tab.0.bottom" timestamp="1584221450631">
+    <state width="1493" height="258" key="GridCell.Tab.0.bottom" timestamp="1586349249208">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584221450631" />
-    <state width="1493" height="258" key="GridCell.Tab.0.center" timestamp="1584221450631">
+    <state width="1493" height="258" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.-149.1024.728@0.0.1536.824" timestamp="1586349249208" />
+    <state width="1493" height="228" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585172171115" />
+    <state width="1493" height="258" key="GridCell.Tab.0.center" timestamp="1586349249207">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584221450631" />
-    <state width="1493" height="258" key="GridCell.Tab.0.left" timestamp="1584221450631">
+    <state width="1493" height="258" key="GridCell.Tab.0.center/0.0.1536.824/1920.-149.1024.728@0.0.1536.824" timestamp="1586349249207" />
+    <state width="1493" height="228" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585172171115" />
+    <state width="1493" height="258" key="GridCell.Tab.0.left" timestamp="1586349249207">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584221450631" />
-    <state width="1493" height="258" key="GridCell.Tab.0.right" timestamp="1584221450631">
+    <state width="1493" height="258" key="GridCell.Tab.0.left/0.0.1536.824/1920.-149.1024.728@0.0.1536.824" timestamp="1586349249207" />
+    <state width="1493" height="228" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585172171114" />
+    <state width="1493" height="258" key="GridCell.Tab.0.right" timestamp="1586349249208">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584221450631" />
-    <state width="1493" height="258" key="GridCell.Tab.1.bottom" timestamp="1584221450632">
+    <state width="1493" height="258" key="GridCell.Tab.0.right/0.0.1536.824/1920.-149.1024.728@0.0.1536.824" timestamp="1586349249208" />
+    <state width="1493" height="228" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585172171115" />
+    <state width="1493" height="258" key="GridCell.Tab.1.bottom" timestamp="1586349249208">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="258" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.-149.1024.728@0.0.1536.824" timestamp="1586349249208" />
     <state width="1493" height="258" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584221450632" />
-    <state width="1493" height="258" key="GridCell.Tab.1.center" timestamp="1584221450631">
+    <state width="1493" height="258" key="GridCell.Tab.1.center" timestamp="1586349249208">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="258" key="GridCell.Tab.1.center/0.0.1536.824/1920.-149.1024.728@0.0.1536.824" timestamp="1586349249208" />
     <state width="1493" height="258" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1584221450631" />
-    <state width="1493" height="258" key="GridCell.Tab.1.left" timestamp="1584221450631">
+    <state width="1493" height="258" key="GridCell.Tab.1.left" timestamp="1586349249208">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="258" key="GridCell.Tab.1.left/0.0.1536.824/1920.-149.1024.728@0.0.1536.824" timestamp="1586349249208" />
     <state width="1493" height="258" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1584221450631" />
-    <state width="1493" height="258" key="GridCell.Tab.1.right" timestamp="1584221450632">
+    <state width="1493" height="258" key="GridCell.Tab.1.right" timestamp="1586349249208">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="258" key="GridCell.Tab.1.right/0.0.1536.824/1920.-149.1024.728@0.0.1536.824" timestamp="1586349249208" />
     <state width="1493" height="258" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1584221450632" />
-    <state x="277" y="0" key="SettingsEditor" timestamp="1584221667106">
+    <state x="277" y="0" key="SettingsEditor" timestamp="1587475699085">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1584221667106" />
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.824/1920.-149.1024.728@0.0.1536.824" timestamp="1587475699085" />
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1584475562183" />
     <state x="527" y="116" key="VCS.ChangeListViewerDialog" timestamp="1580914304094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="527" y="116" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1580914304094" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1584198924232">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1586198429105">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584198924232" />
-    <state x="498" y="305" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1576178530052">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="498" y="305" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1576178530052" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.-149.1024.728@0.0.1536.824" timestamp="1586198429105" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585166370409" />
     <state x="574" y="276" key="git4idea.rebase.GitRebaseDialog" timestamp="1580914307790">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="276" key="git4idea.rebase.GitRebaseDialog/0.0.1536.824@0.0.1536.824" timestamp="1580914307790" />
-    <state x="209" y="34" key="new project wizard" timestamp="1584027456895">
+    <state x="209" y="34" key="new project wizard" timestamp="1587475771574">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="209" y="34" key="new project wizard/0.0.1536.824/1920.-149.1024.728@0.0.1536.824" timestamp="1587475771574" />
     <state x="209" y="34" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1584027456895" />
-    <state x="455" y="258" width="705" height="307" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1576584685962">
+    <state x="455" y="204" width="705" height="306" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1586199303791">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="455" y="258" width="705" height="307" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1536.824@0.0.1536.824" timestamp="1576584685962" />
-    <state x="475" y="7" key="refactoring.ChangeSignatureDialog" timestamp="1584204279027">
+    <state x="455" y="204" width="705" height="306" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1536.824/1920.-149.1024.728@0.0.1536.824" timestamp="1586199303791" />
+    <state x="475" y="7" key="refactoring.ChangeSignatureDialog" timestamp="1586199202161">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="475" y="7" key="refactoring.ChangeSignatureDialog/0.0.1536.824/1920.-149.1024.728@0.0.1536.824" timestamp="1586199202161" />
     <state x="475" y="7" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1584204279027" />
     <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1583932411972">
       <screen x="0" y="0" width="1536" height="824" />
@@ -358,7 +441,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/expression/Main.java</url>
-          <line>14</line>
+          <line>18</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -375,6 +458,16 @@
           <url>file://$PROJECT_DIR$/src/expression/generic/GenericTest.java</url>
           <line>121</line>
           <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/expression/Main.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/expression/parser/ExpressionParser.java</url>
+          <line>192</line>
+          <option name="timeStamp" value="113" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,11 +1,8 @@
 package expression.generic;
 
 import expression.*;
-import org.jetbrains.annotations.NotNull;
 
-import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
-import java.util.function.Function;
 
 /**
  * @author Yaroslav Ilin

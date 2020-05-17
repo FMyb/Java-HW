@@ -231,7 +231,7 @@ public class ExpressionParser<T extends Number> implements Parser<T> {
         }
         if (nextOpertion == OperationType.OPEN_BRACKET) {
             correctOperation = OperationType.NOTHING;
-            MyExpression<T> current = parseAddOrSubstrac();
+            MyExpression<T> current = parseMinOrMax();
             nextOpertion = nextOperation();
             correctOperation = OperationType.NOTHING;
             if (nextOpertion == OperationType.CLOSE_BRACKET) {
